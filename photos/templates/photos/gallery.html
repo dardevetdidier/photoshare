@@ -28,9 +28,15 @@
                         Catégories
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Toutes</li>
+                        <li class="list-group-item">
+                            <a href="{% url 'gallery' %}">Toutes</a>
+                        </li>
                         {% for category in categories %}
-                            <li class="list-group-item">{{ category }}</li>
+                            <li class="list-group-item">
+                                <a href="{% url 'gallery' %}?category={{ category.name }}">
+                                    {{ category }}
+                                </a>
+                            </li>
                         {% endfor %}
 
                         <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm m-1">Ajouter Photo</a>
