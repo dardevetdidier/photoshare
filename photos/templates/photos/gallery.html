@@ -12,6 +12,7 @@
     <style>
         .image-thumbail {
             height: 20rem;
+            object-fit: cover;
         }
     </style>
 </head>
@@ -31,6 +32,10 @@
                         <li class="list-group-item">An item</li>
                         <li class="list-group-item">A second item</li>
                         <li class="list-group-item">A third item</li>
+
+
+                        <a href="{% url 'add' %}" class="btn btn-dark btn-block btn-sm m-1">Ajouter Photo</a>
+
                     </ul>
                 </div>
 
@@ -41,13 +46,13 @@
 
                     <div class="col-md-4">
                         <div class="card my-2">
-                            <img src="https://images.unsplash.com/photo-1529778873920-4da4926a72c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE2fHx8ZW58MHx8fHw%3D&w=1000&q=80"
+                            <img src="https://cdn.vox-cdn.com/thumbor/_uOGMmZS6g9DxTmS7KynYmyVj4c=/0x0:7808x5506/1400x1050/filters:focal(3246x2374:4494x3622):no_upscale()/cdn.vox-cdn.com/uploads/chorus_image/image/68672382/shutterstock_149489132.0.0.jpg"
                                  class="image-thumbail" alt="...">
 
                             <div class="card-body">
                                 <small> Catégorie: Animaux</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url "photo" 5 %}">View</a>
+                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'photo' 5 %}">View</a>
                         </div>
                     </div>
 
@@ -59,7 +64,7 @@
                             <div class="card-body">
                                 <small> Catégorie: Animaux</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url "photo" 5 %}">View</a>
+                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'photo' 5 %}">View</a>
                         </div>
                     </div>
 
@@ -71,7 +76,7 @@
                             <div class="card-body">
                                 <small> Catégorie: Animaux</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url "photo" 5 %}">View</a>
+                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'photo' 5 %}">View</a>
                         </div>
                     </div>
 
@@ -83,7 +88,7 @@
                             <div class="card-body">
                                 <small> Catégorie: Animaux</small>
                             </div>
-                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url "photo" 5 %}">View</a>
+                            <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'photo' 5 %}">View</a>
                         </div>
                     </div>
 
