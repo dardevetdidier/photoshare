@@ -24,12 +24,13 @@
     <nav class="navbar navbar-dark bg-dark mb-5">
         <div class="container-fluid justify-content-center">
             <span class="navbar-brand mb-0 py-4">Album Photo</span>
+
             {% if not user.is_authenticated %}
-            <a href="{% url 'login' %}" class="btn btn-outline-light btn-sm me-3 position-absolute top-50 end-0 translate-middle-y"><i class="fas fa-sign-in-alt"></i></a>
+                <a href="{% url 'login' %}" class="btn btn-outline-light btn-sm me-3 position-absolute top-50 end-0 translate-middle-y"><i class="fas fa-sign-in-alt"></i></a>
             {% else %}
                 <a href="{% url 'logout' %}" class="btn btn-outline-light btn-sm me-3 position-absolute top-50 end-0 translate-middle-y"><i class="fas fa-power-off fa-1x"></i></a>
-
             {% endif %}
+
         </div>
     </nav>
 
@@ -45,6 +46,7 @@
                         <li class="list-group-item">
                             <a href="{% url 'gallery' %}">Toutes</a>
                         </li>
+
                         {% for category in categories %}
                             <li class="list-group-item">
                                 <a href="{% url 'gallery' %}?category={{ category.name }}">
@@ -65,7 +67,7 @@
                 <div class="row">
 
                     {% for photo in photos %}
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-6">
                             <div class="card my-2">
                                 <img src="{{ photo.image.url }}" class="image-thumbail" alt="...">
 
