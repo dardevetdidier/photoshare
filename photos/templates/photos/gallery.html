@@ -23,7 +23,7 @@
 <body>
     <nav class="navbar navbar-dark bg-dark mb-5">
         <div class="container-fluid justify-content-center">
-            <span class="navbar-brand mb-0 py-4">Mon Album Photo</span>
+            <span class="navbar-brand mb-0 py-4">Album Photo</span>
             {% if not user.is_authenticated %}
             <a href="{% url 'login' %}" class="btn btn-outline-light btn-sm me-3 position-absolute top-50 end-0 translate-middle-y">Se connecter</a>
             {% else %}
