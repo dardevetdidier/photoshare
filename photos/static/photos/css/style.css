@@ -6,10 +6,10 @@
 .list-group-item a {
     text-decoration: none;
     color: black;
+    font-family: "Montserrat", sans-serif;
 }
 
 .navbar-brand {
     font-family: "Montserrat", sans-serif;
     font-size: 2em;
 }
-

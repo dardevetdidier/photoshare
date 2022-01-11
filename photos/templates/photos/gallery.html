@@ -68,13 +68,13 @@
 
                     {% for photo in photos %}
                         <div class="col-lg-4 col-md-6">
-                            <div class="card my-2">
+                            <div class="card border-dark my-2">
                                 <img src="{{ photo.image.url }}" class="image-thumbail" alt="...">
 
                                 <div class="card-body">
                                     <small> Catégorie: {{ photo.category }}</small>
                                 </div>
-                                <a class="btn btn-outline-dark btn-sm m-1" href="{% url 'photo' photo.id %}">View</a>
+                                <a class="btn btn-dark btn-sm m-1" href="{% url 'photo' photo.id %}">Voir</a>
                             </div>
                         </div>
                     {% empty %}
