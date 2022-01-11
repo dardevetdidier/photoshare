@@ -13,10 +13,10 @@
     font-size: 2em;
 }
 
-@media screen and (max-width:992px)
-{
-    .navbar-brand {
-        font-size: 1em;
-    }
-}
+/*@media screen and (max-width:992px)*/
+/*{*/
+/*    .navbar-brand {*/
+/*        font-size: 1em;*/
+/*    }*/
+/*}*/
 
