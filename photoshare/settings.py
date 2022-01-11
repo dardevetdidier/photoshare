@@ -128,7 +128,7 @@ MEDIA_URL = '/images/'
 
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'photos/static/photos',
+    BASE_DIR / 'photos/static',
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
