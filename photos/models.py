@@ -15,6 +15,10 @@ class Photo(models.Model):
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True, blank=True)
     image = models.ImageField(null=False, blank=False)
     description = models.TextField()
+    add_date = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ["-add_date"]
 
     def __str__(self):
         return self.description
