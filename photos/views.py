@@ -1,4 +1,8 @@
+from django.contrib import messages
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from .forms import LoginForm
 
 
 from .models import Category, Photo
@@ -15,7 +19,6 @@ def gallery(request):
     categories = Category.objects.all()
     context = {'categories': categories,
                'photos': photos,
-
                }
     return render(request, 'photos/gallery.html', context=context)
 
@@ -39,7 +42,7 @@ def addphoto(request):
         else:
             category = None
 
-        photo = Photo.objects.create(
+        Photo.objects.create(
             category=category,
             description=data['description'],
             image=image
@@ -49,3 +52,21 @@ def addphoto(request):
 
     context = {'categories': categories}
     return render(request, 'photos/add.html', context=context)
+
+
+def login_user(request):
+    login_form = LoginForm()
+    if request.method == 'POST':
+        data = request.POST
+        user = authenticate(request, username=data['username'], password=data['password'])
+        if user:
+            login(request, user)
+            return redirect('gallery')
+        else:
+            messages.info(request, "Erreur dans le nom d'utilisateur et/ou le mot de passe")
+    return render(request, 'photos/login.html', context={'login_form': login_form})
+
+
+def logout_user(request):
+    logout(request)
+    return redirect('gallery')

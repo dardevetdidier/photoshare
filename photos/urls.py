@@ -5,4 +5,6 @@ urlpatterns = [
     path('', views.gallery, name="gallery"),
     path('photo/<str:pk>/', views.viewphoto, name="photo"),
     path('add/', views.addphoto, name="add"),
+    path('login/', views.login_user, name="login"),
+    path('logout/', views.logout_user, name="logout"),
 ]
