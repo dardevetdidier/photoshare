@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['album-photo-v01.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['photoshare-88f01e815557.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
