@@ -142,7 +142,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # AWS S3 Configuration
 # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html
 
-AWS_QUERYSTRING_AUTH = False
+AWS_QUERYSTRING_AUTH = True
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
